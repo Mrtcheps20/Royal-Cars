@@ -1,0 +1,21 @@
+{
+  "name": "royal-cars",
+  "version": "1.0.0",
+  "description": "Royal Cars - Location Automobile Cameroun",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "car-rental",
+    "location-automobile",
+    "cameroun"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  }
+}
