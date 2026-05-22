@@ -911,6 +911,27 @@
       </div>
     </div>
 
+    <div class="fleet-card">
+      <div class="fleet-img minivan">
+        <img src="images/Avensis 2008.JPG"
+             alt="Toyota Avensis 2008"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      </div>
+      <div class="fleet-info">
+        <div class="fleet-name">Toyota  Avensis 2008</div>
+        <div class="fleet-category">Berline</div>
+        <div class="fleet-features">
+          <span class="feat-chip">5 places</span>
+          <span class="feat-chip">Clim</span>
+          <span class="feat-chip">manuel</span>
+        </div>
+        <div class="fleet-footer">
+          <div class="fleet-price">50 000 <small>FCFA/jour</small></div>
+          <a href="#contact" class="fleet-btn">Réserver</a>
+        </div>
+      </div>
+    </div>
+
      <div class="fleet-card">
       <div class="fleet-img minivan">
         <img src="images/Camry 2014. gris jpeg.jpeg"
@@ -926,7 +947,7 @@
           <span class="feat-chip">Auto</span>
         </div>
         <div class="fleet-footer">
-          <div class="fleet-price">50 000 <small>FCFA/jour</small></div>
+          <div class="fleet-price">35 000 <small>FCFA/jour</small></div>
           <a href="#contact" class="fleet-btn">Réserver</a>
         </div>
       </div>
@@ -1016,7 +1037,9 @@
           <div class="fleet-price">95 000<small>FCFA/jour</small></div>
           <a href="#contact" class="fleet-btn">Réserver</a>
         </div>
-     <div class="fleet-card">
+      </div>
+    </div> 
+         <div class="fleet-card">
       <div class="fleet-img minivan">
         <img src="images/Toyota Hilux .JPG"
              alt="Toyota Hilux"
@@ -1034,7 +1057,7 @@
         <div class="fleet-footer">
           <div class="fleet-price">90 000<small>FCFA/jour</small></div>
           <a href="#contact" class="fleet-btn">Réserver</a>
-        </div>
+        </div> 
   </div>
 </section>
 
@@ -1213,7 +1236,9 @@
           <option>Berline Mercedes Classe E 2017 (100 000/j)</option>
           <option>Berline Toyota Camry 2014 rouge/Grise (50 000/j)</option>
           <option>SUV 4×4 Toyota RAV4 2014 Blanc (55 000/j)</option>
-          <option>SUV 4x4 Toyota RAV4 2010, 2012 (50 000/j) </option>        
+          <option>SUV 4x4 Toyota RAV4 2010, 2012 (50 000/j) </option> 
+          <option>Pick up Toyota Land cruiser FJ 79 (95 000/j)</option>
+          <option>Pick up Toyota Hilux (90 000/j)</option>       
         </select>
       </div>
       <div class="form-group">
@@ -1569,10 +1594,12 @@ const vehicleData = {
   "Auris 2008 grise":        { specs:[{icon:"📅",label:"Année",value:"2008"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🛡️",label:"Assurance",value:"Incluse"}], derniereLocation:"3 mai 2025",  totalLocations:28, clientsDistincts:18, noteMoyenne:"4.8 ★" },
   "Mercedes classe E 2017":  { specs:[{icon:"📅",label:"Année",value:"2017"},{icon:"⛽",label:"Carburant",value:"Diesel"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🚀",label:"Transmission",value:"4Matic"}], derniereLocation:"8 mai 2025",  totalLocations:14, clientsDistincts:10, noteMoyenne:"5.0 ★" },
   "Toyota Camry 2014 rouge": { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Rouge"}],  derniereLocation:"5 mai 2025",  totalLocations:22, clientsDistincts:15, noteMoyenne:"4.9 ★" },
+  "Toyota Avensis":          { specs:[{icon:"📅",label:"Année",value:"2008"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Grise"}],  derniereLocation:"17 mai 2025",  totalLocations:32, clientsDistincts:15, noteMoyenne:"4.9 ★" },
   "Toyota Camry 2014 grise": { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Grise"}],  derniereLocation:"1 mai 2025",  totalLocations:19, clientsDistincts:13, noteMoyenne:"4.8 ★" },
   "Toyota Rav4 2014 blanc":  { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"10 mai 2025", totalLocations:31, clientsDistincts:20, noteMoyenne:"4.9 ★" },
   "Toyota Rav4 2010 Vert":   { specs:[{icon:"📅",label:"Année",value:"2010"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"29 avril 2025",totalLocations:17, clientsDistincts:11, noteMoyenne:"4.7 ★" },
   "Toyota Rav4 2012 Grise":  { specs:[{icon:"📅",label:"Année",value:"2012"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"7 mai 2025",  totalLocations:24, clientsDistincts:16, noteMoyenne:"4.8 ★" },
+  "Toyota Hilux":            { specs:[{icon:"📅",label:"Année",value:"2015"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"17 mai 2025", totalLocations:17, clientsDistincts:7, noteMoyenne:"4.6 ★"},
 };
 
 function openVehicleModal(card) {
@@ -1647,4 +1674,4 @@ function initFleetCards() {
 </script>
 <script defer src="/_vercel?indights/script.js"></script>
 </body>
-</html>
+</html> 
