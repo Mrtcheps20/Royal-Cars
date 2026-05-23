@@ -697,22 +697,36 @@
     0%, 100% { transform: scale(1);   opacity: 1; }
     50%       { transform: scale(1.04); opacity: .6; }
   }
-
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 3rem 5%; text-align: center; }
-    .hero p { margin: 0 auto 2rem; }
-    .hero-btns { justify-content: center; flex-wrap: wrap; }
-    .hero-stats { justify-content: center; }
-    .hero-visual { display: none; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-content { flex-direction: column; text-align: center; }
-    nav .nav-links { display: none; }
-    .modal-box { grid-template-columns: 1fr; max-height: 95vh; }
-    .modal-img-side { border-radius: 22px 22px 0 0; min-height: 220px; }
-    .modal-info-side { padding: 1.4rem; }
-    .review-form-row { grid-template-columns: 1fr; }
-    .rating-summary { flex-direction: column; align-items: flex-start; }
+  /* ... tes règles existantes ... */
+
+  /* Fix bande droite */
+  .hero::before,
+  .hero::after {
+    display: none; /* supprime les cercles décoratifs */
+  }
+
+  .hero-logo-wrap {
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+    overflow: hidden;
+  }
+
+  .hero-logo-ring:first-of-type {
+    width: min(250px, 85vw);
+    height: min(250px, 85vw);
+  }
+
+  .hero-logo-ring-2 {
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+  }
+
+  /* Sécurité globale */
+  section {
+    overflow-x: hidden;
+  }
+
   }
 </style>
 
