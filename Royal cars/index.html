@@ -25,6 +25,10 @@
     background: var(--light);
     color: var(--text);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0%;
   }
 
   /* SEPARATEUR */
@@ -693,22 +697,36 @@
     0%, 100% { transform: scale(1);   opacity: 1; }
     50%       { transform: scale(1.04); opacity: .6; }
   }
-
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 3rem 5%; text-align: center; }
-    .hero p { margin: 0 auto 2rem; }
-    .hero-btns { justify-content: center; flex-wrap: wrap; }
-    .hero-stats { justify-content: center; }
-    .hero-visual { display: none; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-content { flex-direction: column; text-align: center; }
-    nav .nav-links { display: none; }
-    .modal-box { grid-template-columns: 1fr; max-height: 95vh; }
-    .modal-img-side { border-radius: 22px 22px 0 0; min-height: 220px; }
-    .modal-info-side { padding: 1.4rem; }
-    .review-form-row { grid-template-columns: 1fr; }
-    .rating-summary { flex-direction: column; align-items: flex-start; }
+  /* ... tes règles existantes ... */
+
+  /* Fix bande droite */
+  .hero::before,
+  .hero::after {
+    display: none; /* supprime les cercles décoratifs */
+  }
+
+  .hero-logo-wrap {
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+    overflow: hidden;
+  }
+
+  .hero-logo-ring:first-of-type {
+    width: min(250px, 85vw);
+    height: min(250px, 85vw);
+  }
+
+  .hero-logo-ring-2 {
+    width: min(280px, 90vw);
+    height: min(280px, 90vw);
+  }
+
+  /* Sécurité globale */
+  section {
+    overflow-x: hidden;
+  }
+
   }
 </style>
 
@@ -926,7 +944,7 @@
           <span class="feat-chip">manuel</span>
         </div>
         <div class="fleet-footer">
-          <div class="fleet-price">50 000 <small>FCFA/jour</small></div>
+          <div class="fleet-price">35 000 <small>FCFA/jour</small></div>
           <a href="#contact" class="fleet-btn">Réserver</a>
         </div>
       </div>
@@ -947,7 +965,7 @@
           <span class="feat-chip">Auto</span>
         </div>
         <div class="fleet-footer">
-          <div class="fleet-price">35 000 <small>FCFA/jour</small></div>
+          <div class="fleet-price">50 000 <small>FCFA/jour</small></div>
           <a href="#contact" class="fleet-btn">Réserver</a>
         </div>
       </div>
@@ -1594,7 +1612,7 @@ const vehicleData = {
   "Auris 2008 grise":        { specs:[{icon:"📅",label:"Année",value:"2008"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🛡️",label:"Assurance",value:"Incluse"}], derniereLocation:"3 mai 2025",  totalLocations:28, clientsDistincts:18, noteMoyenne:"4.8 ★" },
   "Mercedes classe E 2017":  { specs:[{icon:"📅",label:"Année",value:"2017"},{icon:"⛽",label:"Carburant",value:"Diesel"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🚀",label:"Transmission",value:"4Matic"}], derniereLocation:"8 mai 2025",  totalLocations:14, clientsDistincts:10, noteMoyenne:"5.0 ★" },
   "Toyota Camry 2014 rouge": { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Rouge"}],  derniereLocation:"5 mai 2025",  totalLocations:22, clientsDistincts:15, noteMoyenne:"4.9 ★" },
-  "Toyota Avensis":          { specs:[{icon:"📅",label:"Année",value:"2008"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Grise"}],  derniereLocation:"17 mai 2025",  totalLocations:32, clientsDistincts:15, noteMoyenne:"4.9 ★" },
+  "Avensis 2008":            { specs:[{icon:"📅",label:"Année",value:"2008"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Grise"}],  derniereLocation:"17 mai 2025",  totalLocations:32, clientsDistincts:15, noteMoyenne:"4.9 ★" },
   "Toyota Camry 2014 grise": { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🎨",label:"Couleur",value:"Grise"}],  derniereLocation:"1 mai 2025",  totalLocations:19, clientsDistincts:13, noteMoyenne:"4.8 ★" },
   "Toyota Rav4 2014 blanc":  { specs:[{icon:"📅",label:"Année",value:"2014"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"10 mai 2025", totalLocations:31, clientsDistincts:20, noteMoyenne:"4.9 ★" },
   "Toyota Rav4 2010 Vert":   { specs:[{icon:"📅",label:"Année",value:"2010"},{icon:"⛽",label:"Carburant",value:"Essence"},{icon:"⚙️",label:"Boîte",value:"Automatique"},{icon:"🏔️",label:"Terrain",value:"Tout-terrain"}], derniereLocation:"29 avril 2025",totalLocations:17, clientsDistincts:11, noteMoyenne:"4.7 ★" },
