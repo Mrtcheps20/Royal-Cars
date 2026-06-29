@@ -4,9 +4,9 @@
   "description": "Royal Cars - Location Automobile Cameroun",
   "private": true,
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Static site - no build required'",
-    "start": "npx serve ."
+"dev": "npx serve code/main",
+"build": "echo 'Static site - no build required'",
+"start": "npx serve code/main"
   },
   "keywords": [
     "car-rental",
