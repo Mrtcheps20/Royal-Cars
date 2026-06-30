@@ -47,7 +47,7 @@ function handleSubmit(e) {
 
 let allReviews = [];
 const defaultReviews = [
-  { name:"Jean-Claude Nkomo", vehicle:"Toyota Camry",           rating:5, comment:"Service impeccable ! La voiture était propre, livrée à l'heure.", initials:"JN", color:"#1B3A6B" },
+  { name:"Jean-Claude Nkomo", vehicle:"Toyota Camry",           rating:4, comment:"Service impeccable ! La voiture était propre, livrée à l'heure.", initials:"JN", color:"#1B3A6B" },
   { name:"Aminata Fofana",    vehicle:"Toyota RAV4 2014 blanc", rating:5, comment:"Réservation facile via WhatsApp, paiement par Orange Money sans problème.", initials:"AF", color:"#1B5E8B" },
   { name:"Emmanuel Bikele",   vehicle:"Toyota RAV4 2012 Grise", rating:5, comment:"J'ai loué un SUV pour 2 semaines. Prix honnête, assistance disponible.", initials:"EB", color:"#C9A96E" },
 ];
