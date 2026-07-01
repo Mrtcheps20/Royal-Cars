@@ -14,12 +14,13 @@
 <!-- NAV -->
 <nav>
   <a class="logo" href="#" style="display:flex;align-items:center;gap:0.55rem;text-decoration:none;"><img src="../../Assets/logo/Royal-Cars-logo.jpeg" alt="Royal Cars Logo" style="height:40px;width:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">Royal <span>Cars</span></a>
-  <ul class="nav-links">
-    <li><a href="#fleet">Nos Véhicules</a></li>
-    <li><a href="#tarifs">Tarifs</a></li>
-    <li><a href="#avantages">À Propos</a></li>
-    <li><a href="#contact" class="nav-cta">Réserver</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#fleet" onclick="closeMobileNav()">Nos Véhicules</a></li>
+    <li><a href="#tarifs" onclick="closeMobileNav()">Tarifs</a></li>
+    <li><a href="#avantages" onclick="closeMobileNav()">À Propos</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMobileNav()">Réserver</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
 </nav>
 
 <!-- HERO -->
