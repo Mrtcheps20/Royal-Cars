@@ -119,7 +119,22 @@ function renderDynamicReviews() {
 }
 
 let selectedRating = 0;
+
+function closeMobileNav() {
+  document.getElementById("navLinks")?.classList.remove("open");
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("nav")) navLinks.classList.remove("open");
+    });
+  }
   document.querySelectorAll(".star-pick").forEach(star => {
     star.addEventListener("mouseenter", () => {
       const v = +star.dataset.val;

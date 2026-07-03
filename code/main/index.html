@@ -13,13 +13,14 @@
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#" style="display:flex;align-items:center;gap:0.55rem;text-decoration:none;"><img src="../../Assets/logo/Royal-Cars-logo.jpeg" alt="Royal Cars Logo" style="height:40px;width:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">Royal <span>Cars</span></a>
-  <ul class="nav-links">
-    <li><a href="#fleet">Nos Véhicules</a></li>
-    <li><a href="#tarifs">Tarifs</a></li>
-    <li><a href="#avantages">À Propos</a></li>
-    <li><a href="#contact" class="nav-cta">Réserver</a></li>
+  <a class="logo" href="#" style="display:flex;align-items:center;gap:0.55rem;text-decoration:none;"><img src="Assets/logo/Royal-Cars-logo.jpeg" alt="Royal Cars Logo" style="height:40px;width:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">Royal <span>Cars</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#fleet" onclick="closeMobileNav()">Nos Véhicules</a></li>
+    <li><a href="#tarifs" onclick="closeMobileNav()">Tarifs</a></li>
+    <li><a href="#avantages" onclick="closeMobileNav()">À Propos</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMobileNav()">Réserver</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
 </nav>
 
 <!-- HERO -->
@@ -50,7 +51,7 @@
   <!-- LOGO HERO DROITE -->
   <div class="hero-visual" style="display:flex;align-items:center;justify-content:center;">
     <div class="hero-logo-wrap">
-      <img src="../../Assets/logo/Royal-Cars-logo.jpeg" alt="Royal Cars Logo" class="hero-logo-img">
+      <img src="Assets/logo/Royal-Cars-logo.jpeg" alt="Royal Cars Logo" class="hero-logo-img">
       <div class="hero-logo-ring"></div>
       <div class="hero-logo-ring hero-logo-ring-2"></div>
     </div>
@@ -70,7 +71,7 @@
 
     <div class="fleet-card">
       <div class="fleet-img sedan">
-        <img src="../../Assets/images/Auris 2008 grise.jpeg"
+        <img src="Assets/images/Auris 2008 grise.jpeg"
              alt="Auris 2008 grise"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -91,7 +92,7 @@
 
     <div class="fleet-card">
       <div class="fleet-img pickup">
-        <img src="../../Assets/images/Mercedes classe E 2017.jpeg"
+        <img src="Assets/images/Mercedes classe E 2017.jpeg"
              alt="Mercedes classe E 2017"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -112,7 +113,7 @@
 
     <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Camry rouge.jpeg"
+        <img src="Assets/images/Camry rouge.jpeg"
              alt="Toyota Camry 2014 Rouge"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -133,7 +134,7 @@
 
     <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Avensis 2008.JPG"
+        <img src="Assets/images/Avensis 2008.JPG"
              alt="Toyota Avensis 2008"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -154,7 +155,7 @@
 
      <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Camry 2014. gris jpeg.jpeg"
+        <img src="Assets/images/Camry 2014. gris jpeg.jpeg"
              alt="Toyota Camry 2014 Grise"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -175,7 +176,7 @@
 
        <div class="fleet-card">
       <div class="fleet-img suv">
-        <img src="../../Assets/images/Rav4 blanc.jpeg"
+        <img src="Assets/images/Rav4 blanc.jpeg"
              alt="Toyota Rav4 2014 blanc "
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -196,7 +197,7 @@
 
      <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Rav4 2010 Vert .jpeg"
+        <img src="Assets/images/Rav4 2010 Vert .jpeg"
              alt="Toyota Rav4 2010 Vert"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -218,7 +219,7 @@
 
      <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Rav4 2012 gris.jpeg"
+        <img src="Assets/images/Rav4 2012 gris.jpeg"
              alt="Toyota Rav4 2012 Grise"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -240,7 +241,7 @@
 
     <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Land cruiser FJ79.JPG"
+        <img src="Assets/images/Land cruiser FJ79.JPG"
              alt="Toyota Land cruiser FJ79"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -261,7 +262,7 @@
     </div>
          <div class="fleet-card">
       <div class="fleet-img minivan">
-        <img src="../../Assets/images/Toyota Hilux .JPG"
+        <img src="Assets/images/Toyota Hilux .JPG"
              alt="Toyota Hilux"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       </div>
@@ -520,7 +521,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-content">
-    <div class="footer-logo" style="display:flex;align-items:center;gap:0.6rem;"><img src="../../Assets/logo/Royal-Cars-logo.jpeg" alt="" style="height:34px;width:34px;border-radius:50%;object-fit:cover;flex-shrink:0;">Royal <span>Cars</span></div>
+    <div class="footer-logo" style="display:flex;align-items:center;gap:0.6rem;"><img src="Assets/logo/Royal-Cars-logo.jpeg" alt="" style="height:34px;width:34px;border-radius:50%;object-fit:cover;flex-shrink:0;">Royal <span>Cars</span></div>
     <div class="footer-links">
       <a href="#">Accueil</a>
       <a href="#fleet">Véhicules</a>
